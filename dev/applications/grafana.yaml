@@ -9,6 +9,9 @@ spec:
     repoURL: https://github.com/jpoplar3000/argocd-applications.git
     targetRevision: HEAD
     path: helm-charts/grafana
+    helm:
+      valueFiles:
+      - values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
